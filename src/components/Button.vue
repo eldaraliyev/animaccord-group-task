@@ -56,7 +56,7 @@ const formatTime = (value: number): string => {
   <!-- BUTTON WITH ICON -->
   <template v-if="isIconButton">
     <button class="icon-button" :class="variant" v-bind="$attrs">
-      <img :src="`/src/assets/icons/${props.imageSrc}`" alt="logo" />
+      <img :src="`assets/icons/${props.imageSrc}`" alt="logo" />
     </button>
   </template>
   <!-- BUTTON WITH TIMER -->
