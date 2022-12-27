@@ -1,0 +1,39 @@
+$primary: #702c7e;
+$secondary: #c4296c;
+$info: #0083b6;
+$warning: #f4ba46;
+$danger: #df3f3e;
+$action: #ed732e;
+
+$white: #ffffff;
+$light-gray: #efefef;
+$dark-gray: #767679;
+$light-green: #6dd1b0;
+
+$bg-primary: $primary; 
+$bg-secondary: $secondary;
+$bg-warning: $warning;
+$bg-info: $info;
+$bg-danger: $danger;
+$bg-action: $action;
+$bg-disabled: $light-gray;
+
+$bg-google-plus: $bg-danger;
+$bg-vk: $bg-info;
+$bg-ok: $bg-action;
+$bg-faq: $light-green;
+$bg-edit: $primary; 
+
+$button-text-color: $white; 
+$button-disabled-text-color: $dark-gray;
+
+$color-link: $white;
+$color-link-hover: $dark-gray; 
+$color-link-active: $secondary; 
+
+$font-family-button: "Phosphate", sans-serif;
+$font-family-link: "Nunito", sans-serif;
+
+$button-border-radius: 18px 20px 19px 19px/18px 20px 19px 21px;
+
+$button-transition: all 150ms ease;
