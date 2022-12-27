@@ -1,0 +1,121 @@
+@import "./variables";
+
+@mixin disabledBtn {
+  cursor: not-allowed;
+  background-color: $bg-disabled;
+  color: $button-disabled-text-color;
+  &:hover {
+    background-color: $bg-disabled;
+  }
+}
+
+$variants: (
+  "primary": $bg-primary,
+  "secondary": $bg-secondary,
+  "warning": $bg-warning,
+  "info": $bg-info,
+  "danger": $bg-danger,
+  "action": $bg-action,
+  "edit": $bg-edit,
+  "faq": $bg-faq,
+  "vk": $bg-vk,
+  "ok": $bg-ok,
+);
+
+@each $color, $value in $variants {
+  .#{$color} {
+    background-color: $value;
+    &:hover {
+      background-color: darken($color: $value, $amount: 5);
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: $font-family-button;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-radius: $button-border-radius;
+  color: $button-text-color;
+  transition: $button-transition;
+}
+
+.plain-button {
+  min-width: 206px;
+  min-height: 52px;
+  padding: 16px 48px;
+  &:disabled {
+    @include disabledBtn;
+  }
+}
+
+.icon-button {
+  display: grid;
+  place-content: center;
+  width: 60px;
+  height: 60px;
+  & img {
+    scale: 0.9;
+  }
+  
+}
+
+.timer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  height: 52px;
+  background-color: $primary;
+  &:disabled {
+    @include disabledBtn;
+  }
+  .timer {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 6px;
+    min-width: 54px;
+    background-color: $danger;
+    color: $button-text-color;
+    border-radius: $button-border-radius;
+  }
+}
+
+.link-button {
+  font-family: $font-family-link;
+  font-size: 16px;
+  line-height: 18px;
+  transition: $button-transition;
+  text-align: left;
+  color: $color-link;
+  &:hover {
+    color: $color-link-hover;
+  }
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+@media (max-width: 640px) {
+  button {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .plain-button {
+    width: 100%;
+    min-height: 40px;
+    padding: auto 48px;
+  }
+  .icon-button {
+    width: 52px;
+    height: 52px;
+    & img {
+      scale: 0.8;
+    }
+  }
+}
